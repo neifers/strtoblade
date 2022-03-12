@@ -9,8 +9,7 @@ class StrToBlade extends ServiceProvider {
 
     }
 
-    public function register()
-    {
+    public function register(){
         $this->app->singleton(StrToBlade::class);
 
         $this->app->alias(StrToBlade::class, 'dbview');
