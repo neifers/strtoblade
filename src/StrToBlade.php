@@ -15,7 +15,7 @@ class StrToBlade extends ServiceProvider {
         $this->app->alias(StrToBlade::class, 'dbview');
     }
 
-	public function render(String $string) {
-		return 'Hi '.$string;
-	}
+    public function render(String $string) {
+	return 'Hi '.$string;
+    }
 }
