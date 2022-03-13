@@ -19,9 +19,11 @@ class StrToBlade extends ServiceProvider {
     }
 
 	public function render(String $string, String $blade_variable_name, Object $data) {
-		$filename = uniqid('email_');
-		$path = storage_path("/app/db-blade-compiler/views/");
-		$filepath = "$path$filename.blade.php";
+
+    $filename = uniqid('stb_');
+    $path = storage_path("/app/db-blade-compiler/views/");
+    $filepath = "$path$filename.blade.php";
+
 
 		$old_template_files_list = $file_names = preg_grep('~^.*\.php$~', \scandir($path));
 		foreach($old_template_files_list as $old_template_file){
