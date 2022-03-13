@@ -19,7 +19,7 @@ class StrToBlade extends ServiceProvider {
     }
 
 	public function render(String $string, String $blade_variable_name, Object $data) {
-        $filename = uniqid('email_');
+        $filename = uniqid('stb_');
         $path = storage_path("/app/db-blade-compiler/views/");
         $filepath = "$path$filename.blade.php";
 
